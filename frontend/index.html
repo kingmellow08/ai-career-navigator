@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI STEM Career Navigator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>AI STEM Career Navigator</h1>
+    <p>Your personalized learning roadmap, powered by Amazon Bedrock</p>
+  </header>
+
+  <main>
+    <form id="career-form">
+      <label for="goal">Career goal</label>
+      <input id="goal" list="goal-ideas" placeholder="e.g. Cloud Engineer" required>
+      <datalist id="goal-ideas">
+        <option value="Cloud Engineer">
+        <option value="Cybersecurity Analyst">
+        <option value="Data Analyst">
+        <option value="Machine Learning Engineer">
+        <option value="DevOps Engineer">
+        <option value="Software Developer">
+      </datalist>
+
+      <label for="level">Current experience level</label>
+      <select id="level">
+        <option>Complete beginner</option>
+        <option>Some IT or tech exposure</option>
+        <option>Career changer with professional experience</option>
+        <option>Working in tech, moving into a new role</option>
+      </select>
+
+      <label for="interests">Interests</label>
+      <textarea id="interests" rows="2" placeholder="e.g. automation, healthcare, gaming, helping small businesses"></textarea>
+
+      <label for="hours">Hours you can study per week: <strong id="hours-value">6</strong></label>
+      <input id="hours" type="range" min="1" max="30" value="6">
+
+      <button type="submit" id="submit-btn">Generate my roadmap</button>
+    </form>
+
+    <div id="status" role="status"></div>
+    <section id="result" hidden></section>
+  </main>
+
+  <footer>HTML/JS &rarr; API Gateway &rarr; AWS Lambda &rarr; Amazon Bedrock (Nova)</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+{
+  "requestContext": { "http": { "method": "POST" } },
+  "body": "{\"goal\": \"Cloud Engineer\", \"level\": \"Beginner\", \"interests\": \"automation, Linux, helping small businesses\", \"hours\": \"6\"}"
+}
