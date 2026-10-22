@@ -15,15 +15,12 @@ flowchart LR
     IAM["AWS IAM<br/>permissions"]
     CW["Amazon CloudWatch<br/>logs"]
   end
-  U -- "1. Load the website" --> AMP
-  U -- "2. Send answers" --> APIGW
-  APIGW -- "3. Invoke" --> L
-  L -- "4. Prompt" --> BR
-  BR -- "Roadmap" --> L
-  L -- "Roadmap" --> APIGW
-  APIGW -- "5. Roadmap appears" --> U
-  IAM -. "allows Lambda to call Nova" .-> L
-  L -. "writes logs" .-> CW
+  U <-->|"1. Load the website"| AMP
+  U <-->|"2. Send answers<br/>5. Roadmap returns"| APIGW
+  APIGW <-->|"3. Invoke"| L
+  L <-->|"4. Prompt / roadmap"| BR
+  IAM -.->|"allows Lambda to call Nova"| L
+  L -.->|"writes logs"| CW
 ```
 
 | Path | What it is |
